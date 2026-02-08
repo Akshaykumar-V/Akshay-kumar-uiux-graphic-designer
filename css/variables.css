@@ -1,0 +1,19 @@
+/* ===== COLOR VARIABLES ===== */
+:root {
+  /* Background Colors */
+  --bg-primary: #F7F7F7;
+  --bg-card: #FFFFFF;
+  
+  /* Text Colors */
+  --text-primary: #1A1A1A;
+  --text-secondary: #6F6F6F;
+  
+  /* Accent Color */
+  --accent: #F97316;
+  --accent-light: rgba(249, 115, 22, 0.1);
+  --accent-shadow: rgba(249, 115, 22, 0.3);
+  
+  /* Fonts */
+  --font-primary: 'Inter', sans-serif;
+  --font-display: 'Playfair Display', serif;
+}

@@ -1,0 +1,534 @@
+/* ===== NAVIGATION BAR ===== */
+.nav-bar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: #1A1A1A;
+  border-radius: 30px;
+  padding: 12px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+  padding: 100px 40px 60px;
+  background: linear-gradient(135deg, #F7F7F7 0%, #FFFFFF 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-wrapper {
+  max-width: 1400px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* ===== LEFT COLUMN ===== */
+.hero-left {
+  flex: 0 0 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 20px;
+}
+
+.hello-text {
+  font-size: 16px;
+  color: #FF5733;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.quote-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #FF5733;
+  position: relative;
+}
+
+.quote-icon {
+  position: absolute;
+  top: -8px;
+  left: 8px;
+  font-size: 36px;
+  color: #FF5733;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.quote-box p {
+  margin: 0;
+  font-size: 14px;
+  color: #6F6F6F;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.follow-section {
+  margin-top: 10px;
+}
+
+.follow-label {
+  margin: 0 0 12px 0;
+  font-size: 12px;
+  color: #6F6F6F;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
+
+.social-dots {
+  display: flex;
+  gap: 12px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #1A1A1A;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot:hover {
+  background: #FF5733;
+  transform: scale(1.3);
+}
+
+/* ===== CENTER COLUMN ===== */
+.hero-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.heading-group {
+  text-align: center;
+}
+
+.main-heading {
+  font-size: 70px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin: 0;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.name-highlight {
+  color: #FF5733;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 1s infinite;
+  color: #FF5733;
+  font-weight: 800;
+}
+
+@keyframes blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+.subheading {
+  font-size: 15px;
+  color: #6F6F6F;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.6;
+  max-width: 450px;
+}
+
+.profile-container {
+  position: relative;
+  width: 280px;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orange-circle {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 220px;
+  background: linear-gradient(135deg, #FF5733 0%, #FF7A50 100%);
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0 20px 60px rgba(255, 87, 51, 0.2);
+}
+
+.profile-photo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 140px 140px 0 0;
+  z-index: 2;
+}
+
+/* ===== RIGHT COLUMN ===== */
+.hero-right {
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding-top: 20px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  justify-items: start;
+}
+
+.skill-btn {
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  white-space: nowrap;
+}
+
+.skill-btn.white {
+  background: white;
+  color: #1A1A1A;
+  border: 1px solid #E0E0E0;
+}
+
+.skill-btn.white:hover {
+  background: #FF5733;
+  color: white;
+  border-color: #FF5733;
+  transform: translateY(-2px);
+}
+
+.skill-btn.orange {
+  background: #FF5733;
+  color: white;
+  border: none;
+}
+
+.skill-btn.orange:hover {
+  background: #E65625;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(255, 87, 51, 0.3);
+}
+
+.skill-btn.black {
+  background: #1A1A1A;
+  color: white;
+  border: none;
+}
+
+.skill-btn.black:hover {
+  background: #FF5733;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(255, 87, 51, 0.3);
+}
+
+.skill-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.hire-badge-circle {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.rotating-text {
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== SPLIT TEXT ANIMATION ===== */
+
+@keyframes splitTextLeft {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+@keyframes splitTextRight {
+  0% {
+    clip-path: inset(0 0 0 100%);
+    opacity: 0;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+/* Hero Greeting Split Text */
+.hero-greeting {
+  position: relative;
+}
+
+/* Hero Title Split Character Animation */
+.hero-title {
+  position: relative;
+  overflow: visible;
+}
+
+.char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.char.animate {
+  animation: charReveal 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes charReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== HIRE ME BUTTON ANIMATION ===== */
+
+/* Remove infinite rotation from text circle on page load */
+.hire-me-text-circle {
+  animation: rotateTextSlow 6s linear infinite;
+  animation-play-state: paused;
+  transition: animation-play-state 0.2s ease;
+}
+
+/* Hire me button hover interaction */
+.hire-me-badge:hover .hire-me-text-circle {
+  animation-play-state: running;
+}
+
+/* Hire me arrow hover scale */
+.hire-me-badge:hover .hire-me-arrow {
+  transform: scale(1.12);
+}
+
+/* Slow rotation animation for hover state */
+@keyframes rotateTextSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===== FALLING TEXT ANIMATION FOR SKILL TAGS ===== */
+
+/* Apply initial state to skill tags */
+.skill-tag {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show skill tags */
+.skill-tag.visible {
+  opacity: 1;
+}
+
+/* ===== TYPING ANIMATION FOR QUOTE TEXT ===== */
+
+.quote-text {
+  position: relative;
+  min-height: 6.4em;
+  letter-spacing: 0.5px;
+}
+
+.quote-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: #6F6F6F;
+  margin-left: 4px;
+  animation: cursorBlink 1s infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+/* ===== SERVICES FOOTER ===== */
+.services-footer {
+  background: #1A1A1A;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  border-top: 1px solid rgba(255, 87, 51, 0.2);
+  margin-top: 80px;
+}
+
+.service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.service-item:hover {
+  border-color: #FF5733;
+  background: rgba(255, 87, 51, 0.05);
+}
+
+.service-name {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.service-plus {
+  color: #FF5733;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .hero-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+    align-items: center;
+  }
+
+  .skills-grid {
+    justify-items: center;
+    justify-content: center;
+  }
+
+  .main-heading {
+    font-size: 52px;
+  }
+
+  .services-footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 80px 20px 60px;
+  }
+
+  .hero-left {
+    display: none;
+  }
+
+  .hero-right {
+    display: none;
+  }
+
+  .main-heading {
+    font-size: 42px;
+  }
+
+  .profile-container {
+    width: 240px;
+    height: 320px;
+  }
+
+  .orange-circle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .profile-photo {
+    width: 240px;
+    height: 280px;
+    border-radius: 120px 120px 0 0;
+  }
+
+  .services-footer {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .service-item {
+    padding: 16px;
+  }
+}
+
