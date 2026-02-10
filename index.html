@@ -190,8 +190,11 @@
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
-      width: 624px;
-      height: 312px;
+      width: 45vw;
+      min-width: 450px;
+      max-width: 624px;
+      height: 50%;
+      max-height: 312px;
       background-color: #FE4516;
       border-radius: 624px 624px 0 0;
       z-index: 1;
@@ -213,16 +216,17 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-end;
       position: absolute;
       left: 60px;
-      bottom: 60px;
+      bottom: 80px;
+      max-width: 420px;
     }
 
     .hero-skills-section {
       position: absolute;
       right: 60px;
-      top: 340px;
+      bottom: 120px;
       width: 280px;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -335,13 +339,15 @@
     .hero-image-wrapper {
       flex: 0 0 auto;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
+      z-index: 2;
     }
 
     .hero-image {
       max-width: 704px;
-      width: 100%;
+      width: 55vw;
+      min-width: 450px;
       height: auto;
       object-fit: contain;
       margin-bottom: -100px;
@@ -438,8 +444,9 @@
 
     .hire-me-badge {
       position: absolute;
-      right: 120px;
-      top: 140px;
+      right: 80px;
+      top: 50%;
+      transform: translateY(-100%);
       width: 130px;
       height: 130px;
       border-radius: 50%;
@@ -453,7 +460,7 @@
     }
 
     .hire-me-badge:hover {
-      transform: scale(1.1);
+      transform: translateY(-100%) scale(1.1);
       box-shadow: 0 10px 30px rgba(254, 69, 22, 0.3);
     }
 
@@ -513,6 +520,84 @@
 
     /* Responsive Design */
     @media (max-width: 1200px) {
+      .hero-quote-section {
+        left: 30px;
+        bottom: 60px;
+        max-width: 320px;
+      }
+
+      .quote-text {
+        font-size: 20px;
+      }
+
+      .hero-skills-section {
+        right: 30px;
+        bottom: 80px;
+      }
+
+      .hire-me-badge {
+        right: 50px;
+      }
+
+      .hero-image {
+        width: 50vw;
+        min-width: 380px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .hero-quote-section {
+        left: 20px;
+        bottom: 40px;
+        max-width: 280px;
+      }
+
+      .quote-text {
+        font-size: 18px;
+        margin-bottom: 25px;
+      }
+
+      .hero-skills-section {
+        right: 20px;
+        bottom: 60px;
+        width: 240px;
+      }
+
+      .hire-me-badge {
+        right: 30px;
+        width: 110px;
+        height: 110px;
+      }
+
+      .hire-me-inner {
+        width: 110px;
+        height: 110px;
+      }
+
+      .hire-me-text-circle {
+        width: 110px;
+        height: 110px;
+      }
+
+      .hire-me-text-item {
+        width: 110px;
+        height: 110px;
+        font-size: 9px;
+      }
+
+      .hero-image {
+        width: 45vw;
+        min-width: 320px;
+      }
+
+      .social-icon {
+        width: 38px;
+        height: 38px;
+      }
+
+      .social-icon i {
+        font-size: 15px;
+      }
     }
 
     @media (max-width: 768px) {
@@ -523,6 +608,23 @@
 
       .nav-buttons {
         justify-content: center;
+      }
+
+      .hero-quote-section {
+        display: none;
+      }
+
+      .hero-skills-section {
+        display: none;
+      }
+
+      .hire-me-badge {
+        display: none;
+      }
+
+      .hero-image {
+        min-width: 280px;
+        width: 80vw;
       }
     }
 
@@ -1567,7 +1669,7 @@
       </div>
 
       <div class="hero-image-wrapper">
-        <img src="images/image 3.png" alt="Akshay Kumar" class="hero-image">
+        <img src="images/image 4.png" alt="Akshay Kumar" class="hero-image">
       </div>
 
       <div class="hero-skills-section">
@@ -1677,7 +1779,7 @@
         </div>
 
         <div class="about-image-wrapper">
-        <img src="images/Frame 98 (1).png" alt="Akshay Kumar" class="about-image">
+        <img src="images/Frame 98 (2).png" alt="Akshay Kumar" class="about-image">
       </div>
     </div>
   </section>
